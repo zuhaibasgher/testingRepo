@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/action@main
       - name: Hello world action step
         id: hello
         uses: zuhaibasgher/testingRepo/action@main
