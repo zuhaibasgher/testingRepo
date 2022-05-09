@@ -1,15 +1,13 @@
-name: GitHub multiple docker images building Demo
+name: GitHub multiple docker images building Dem
 on: [push]
 jobs:
-run-on: ubuntu-latest
+	run-on: ubuntu-latest
 steps:
-	-name: building docker images
-		run: docker-compose build
-	-name: run first docker image
-		run: docker-compose run /docker/first
-		run: echo "first docker is running"
-	-name: run second docker image
-		run: docker-compose run /docker/second
+	uses: zuhaibasgher/testingRepo@main
+	-name: first docker image
+		run: docker build -f /zuhaibasgher/testingRepo/docker/first/Dockerfile
+	-name: second docker image
+		run: docker build -f /zuhaibasgher/testingRepo/docker/second/Dockerfile
 		run: echo "second docker is running"
 			
 			
