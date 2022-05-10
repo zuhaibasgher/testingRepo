@@ -7,6 +7,6 @@ jobs:
     - name: Check out repository code
       uses: zuhaibasgher/testingRepo@main
     - name: build first docker image
-      run: docker build -f ./docker/first/Dockerfile
+      run: docker build -f docker/first/Dockerfile -t myfirst_image .
     - name: buidl second docker image
-      run: docker build -f ./docker/second/Dockerfile
+      run: docker build -f docker/second/Dockerfile -t mysecond_image
