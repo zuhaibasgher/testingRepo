@@ -8,7 +8,7 @@ jobs:
       uses: zuhaibasgher/testingRepo@main
     - name: build first docker image
       run:
-        docker build -t first_image docker/first/
+        docker build -f docker/first/Dockerfile
     - name: build second docker image
       run:
-        docker build -t second_image docker/second/
+        docker build -f docker/second/Dockerfile
