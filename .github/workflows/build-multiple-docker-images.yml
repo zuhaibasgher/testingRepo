@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository code
-      uses: zuhaibasgher/testingRepo@main
+      uses: zuhaibasgher/testingRepo/docker@main
     - name: build first docker image
-      run:  docker build ./docker/first/
+      run:  docker build ./first
     - name: build second docker image
-      run:  docker build ./docker/second/
+      run:  docker build ./second
