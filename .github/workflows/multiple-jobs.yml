@@ -13,5 +13,5 @@ jobs:
    name: Second
    runs-on: first_image
    steps:
-        - name: testing second job
-          run: echo "Just a test for 2nd job"
+      - name: testing second job
+        run: echo "Just a test for 2nd job"
