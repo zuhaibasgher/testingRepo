@@ -7,6 +7,7 @@ jobs:
     - name: Check out repository code
       uses: actions/checkout@v2
     - name: build first docker image
-      run:  docker build ./docker/first/ --tag first_image .
+      run:  docker build ./docker/first/ --tag first_image
+    - run: docker run first_image  
     - name: build second docker image
       run:  docker build ./docker/second/
