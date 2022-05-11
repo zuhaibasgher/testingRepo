@@ -9,6 +9,7 @@ jobs:
        uses: actions/checkout@v2
      - name: build first docker image
        run:  docker build ./docker/first/ --tag first_image
+     - run: docker run first_image
   Second:
    needs: First
    name: Second
