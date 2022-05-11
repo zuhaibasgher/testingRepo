@@ -12,6 +12,7 @@ jobs:
      - name: List images
        run: docker images  
   Second:
+   needs: First
    name: Second
    runs-on: ubuntu-latest
    steps:
