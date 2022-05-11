@@ -11,7 +11,7 @@ jobs:
        run:  docker build ./docker/first/ --tag first_image
   Second:
    name: Second
-   runs-on: first_image
+   runs-on: ubuntu-latest
    steps:
       - name: testing second job
         run: echo "Just a test for 2nd job"
