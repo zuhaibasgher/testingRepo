@@ -1,0 +1,17 @@
+name: GitHub multiple jobs running
+on: [push]
+job:
+  First build docker image:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v2
+    - name: build first docker image
+      run:  docker build ./docker/first/ --tag first_image
+job:
+  test:
+    runs-on: first_image
+    steps:
+    - name: testing second job
+      run: echo "Just a test for 2nd job"
+    
