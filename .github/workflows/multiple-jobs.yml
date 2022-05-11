@@ -9,8 +9,6 @@ jobs:
        uses: actions/checkout@v2
      - name: build first docker image
        run:  docker build ./docker/first/ --tag first_image
-     - name: List images
-       run: docker images  
   Second:
    needs: First
    name: Second
@@ -18,3 +16,5 @@ jobs:
    steps:
       - name: testing second job
         run: echo "Just a test for 2nd job"
+      - name: List images
+        run: docker images  
